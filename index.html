@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patata Puzzona - Social Media Manager</title>
+    <meta name="description" content="Portfolio professionale di Patata Puzzona, Social Media Manager specializzata in strategie di crescita digitale per brand di nicchia.">
+    <meta name="keywords" content="social media manager, marketing digitale, content strategy, crescita brand, gestione community">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#4c1d95',
+                        },
+                        secondary: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'display': ['Space Grotesk', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .text-balance {
+            text-wrap: balance;
+        }
+        
+        .hover-lift {
+            transition: transform 0.2s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-4px);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #f5f3ff 0%, #f8fafc 100%);
+        }
+        
+        .section-spacing {
+            scroll-margin-top: 5rem;
+        }
+    </style>
+</head>
+<body class="font-sans text-secondary-800 bg-white">
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-secondary-100">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 rounded-full bg-primary-500 flex items-center justify-center">
+                        <span class="text-white font-display font-bold text-sm">PP</span>
+                    </div>
+                    <a href="#" class="font-display font-semibold text-xl text-secondary-900">Patata Puzzona</a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <ul id="nav-links" class="flex space-x-8"></ul>
+                    <a href="#contact" class="bg-primary-600 text-white px-6 py-2 rounded-full font-medium hover:bg-primary-700 transition-colors duration-200">Contattami</a>
+                </div>
+                
+                <button id="mobile-menu-btn" class="md:hidden text-secondary-600">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden mt-4 hidden">
+                <ul id="mobile-nav-links" class="space-y-4"></ul>
+                <a href="#contact" class="mt-4 inline-block bg-primary-600 text-white px-6 py-2 rounded-full font-medium hover:bg-primary-700 transition-colors duration-200">Contattami</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="gradient-bg section-spacing">
+        <div class="container mx-auto px-4 py-16 md:py-24">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-secondary-900 leading-tight">
+                        Trasformo <span class="text-primary-600">idee</span> in presenza digitale memorabile
+                    </h1>
+                    <p class="text-lg md:text-xl text-secondary-600 mt-6 mb-8 max-w-xl">
+                        Sono Patata Puzzona, Social Media Manager specializzata nello sviluppo di strategie di contenuto che connettono brand autentici con il loro pubblico ideale.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#projects" class="bg-primary-600 text-white px-8 py-3 rounded-full font-medium hover:bg-primary-700 transition-colors duration-200 hover-lift">
+                            Vedi i progetti
+                        </a>
+                        <a href="#about" class="border-2 border-primary-600 text-primary-600 px-8 py-3 rounded-full font-medium hover:bg-primary-50 transition-colors duration-200 hover-lift">
+                            Scopri di più
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl">
+                        <img src="https://picsum.photos/600/600?random=101" alt="Patata Puzzona - Social Media Manager" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl max-w-xs">
+                        <div class="flex items-center space-x-3 mb-3">
+                            <div class="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center">
+                                <i class="fas fa-chart-line text-primary-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-display font-bold text-xl">+200%</p>
+                                <p class="text-sm text-secondary-500">Crescita media engagement</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-secondary-600">
+                            Strategie data-driven che trasformano follower in community coinvolte.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-spacing">
+        <div class="container mx-auto px-4 py-16">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-secondary-900 mb-6">
+                    Chi sono
+                </h2>
+                <p class="text-lg text-secondary-600 mb-12">
+                    Con oltre 5 anni di esperienza nel settore digitale, aiuto brand emergenti e stabilizzati a costruire una presenza online autentica e performante attraverso strategie di contenuto mirate e community management.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mt-12">
+                <div class="bg-white p-8 rounded-2xl border border-secondary-100 hover-lift">
+                    <div class="w-14 h-14 rounded-xl bg-primary-100 flex items-center justify-center mb-6">
+                        <i class="fas fa-bullseye text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-display font-semibold text-secondary-900 mb-4">Strategia mirata</h3>
+                    <p class="text-secondary-600">
+                        Analisi approfondita del target audience e sviluppo di piani editoriali che risuonano con il pubblico ideale.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl border border-secondary-100 hover-lift">
+                    <div class="w-14 h-14 rounded-xl bg-primary-100 flex items-center justify-center mb-6">
+                        <i class="fas fa-palette text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-display font-semibold text-secondary-900 mb-4">Brand identity</h3>
+                    <p class="text-secondary-600">
+                        Definizione e mantenimento di una voce coerente che rafforza l'identità del brand su tutti i touchpoint.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl border border-secondary-100 hover-lift">
+                    <div class="w-14 h-14 rounded-xl bg-primary-100 flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-bar text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-display font-semibold text-secondary-900 mb-4">Analisi dati</h3>
+                    <p class="text-secondary-600">
+                        Monitoraggio costante delle performance e ottimizzazione delle strategie basata su metriche concrete.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="gradient-bg section-spacing">
+        <div class="container mx-auto px-4 py-16">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-secondary-900 mb-6">
+                    Servizi
+                </h2>
+                <p class="text-lg text-secondary-600">
+                    Soluzioni complete per la gestione della tua presenza digitale, dalla strategia alla creazione dei contenuti.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid"></div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-spacing">
+        <div class="container mx-auto px-4 py-16">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-secondary-900 mb-6">
+                    Progetti
+                </h2>
+                <p class="text-lg text-secondary-600">
+                    Case study di successo che dimostrano l'impatto delle strategie implementate.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid"></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="gradient-bg section-spacing">
+        <div class="container mx-auto px-4 py-16">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-display font-bold text-secondary-900 mb-6">
+                        Lavoriamo insieme
+                    </h2>
+                    <p class="text-lg text-secondary-600">
+                        Pronto a portare la tua presenza digitale al livello successivo? Scrivimi per una consulenza gratuita.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-secondary-700 mb-2">
+                                    Nome *
+                                </label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-secondary-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-colors duration-200">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-secondary-700 mb-2">
+                                    Email *
+                                </label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-secondary-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-colors duration-200">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="company" class="block text-sm font-medium text-secondary-700 mb-2">
+                                Azienda / Brand
+                            </label>
+                            <input type="text" id="company" name="company" class="w-full px-4 py-3 rounded-lg border border-secondary-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-colors duration-200">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-secondary-700 mb-2">
+                                Messaggio *
+                            </label>
+                            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 rounded-lg border border-secondary-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-colors duration-200 resize-none"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-primary-600 text-white py-3 rounded-lg font-medium hover:bg-primary-700 transition-colors duration-200">
+                            Invia messaggio
+                        </button>
+                    </form>
+                    
+                    <div class="mt-12 pt-8 border-t border-secondary-100">
+                        <div class="grid md:grid-cols-3 gap-8" id="contact-info"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-900 text-white">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-primary-500 flex items-center justify-center">
+                            <span class="text-white font-display font-bold">PP</span>
+                        </div>
+                        <span class="font-display font-semibold text-xl">Patata Puzzona</span>
+                    </div>
+                    <p class="text-secondary-300 max-w-md">
+                        Social Media Manager specializzata nello sviluppo di strategie digitali che uniscono creatività e analisi dati per risultati concreti.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="font-display font-semibold text-lg mb-6">Link rapidi</h3>
+                    <ul id="footer-links" class="space-y-3"></ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-display font-semibold text-lg mb-6">Connettiamoci</h3>
+                    <div class="flex space-x-4" id="social-links"></div>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-secondary-800 text-center text-secondary-400 text-sm">
+                <p>&copy; <span id="current-year"></span> Patata Puzzona. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Data Layer
+        const navigationData = [
+            { label: "Home", href: "#hero" },
+            { label: "Chi sono", href: "#about" },
+            { label: "Servizi", href: "#services" },
+            { label: "Progetti", href: "#projects" },
+            { label: "Contatti", href: "#contact" }
+        ];
+
+        const servicesData = [
+            {
+                title: "Strategia Social Media",
+                description: "Piano editoriale completo e calendario contenuti su misura per i tuoi obiettivi di business.",
+                icon: "fas fa-calendar-alt",
+                features: ["Analisi competitor", "Piano editoriale mensile", "Calendarizzazione"]
+            },
+            {
+                title: "Content Creation",
+                description: "Creazione di contenuti visivi e testuali coerenti con la brand identity.",
+                icon: "fas fa-camera",
+                features: ["Foto & video", "Copywriting", "Graphic design"]
+            },
+            {
+                title: "Community Management",
+                description: "Gestione della community, engagement e customer care sui social.",
+                icon: "fas fa-users",
+                features: ["Monitoraggio commenti", "Risposte DM", "Moderazione"]
+            },
+            {
+                title: "Advertising",
+                description: "Campagne pubblicitarie su Facebook, Instagram e LinkedIn per massimizzare il ROI.",
+                icon: "fas fa-ad",
+                features: ["Targeting avanzato", "A/B testing", "Report dettagliati"]
+            },
+            {
+                title: "Analisi & Report",
+                description: "Monitoraggio delle performance e report mensili con insights e raccomandazioni.",
+                icon: "fas fa-chart-pie",
+                features: ["Metriche KPI", "Analisi competitor", "Recommendations"]
+            },
+            {
+                title: "Formazione Team",
+                description: "Workshop e formazione per il tuo team sulle best practice dei social media.",
+                icon: "fas fa-graduation-cap",
+                features: ["Social media policy", "Best practice", "Case study"]
+            }
+        ];
+
+        const projectsData = [
+            {
+                title: "EcoWear Brand",
+                description: "Strategia di contenuti sostenibili per un brand di moda etica.",
+                category: "Fashion",
+                results: "+150% engagement",
+                image: "https://picsum.photos/400/300?random=201",
+                color: "bg-green-50"
+            },
+            {
+                title: "TechStart Forum",
+                description: "Community building per una piattaforma tech conference.",
+                category: "Tech",
+                results: "+300% followers",
+                image: "https://picsum.photos/400/300?random=202",
+                color: "bg-blue-50"
+            },
+            {
+                title: "Artisan Coffee",
+                description: "Brand storytelling per una torrefazione artigianale.",
+                category: "Food & Beverage",
+                results: "+200% sales",
+                image: "https://picsum.photos/400/300?random=203",
+                color: "bg-amber-50"
+            }
+        ];
+
+        const contactInfoData = [
+            {
+                icon: "fas fa-envelope",
+                title: "Email",
+                value: "hello@patatapuzzona.com",
+                link: "mailto:hello@patatapuzzona.com"
+            },
+            {
+                icon: "fas fa-phone",
+                title: "Telefono",
+                value: "+39 123 456 7890",
+                link: "tel:+391234567890"
+            },
+            {
+                icon: "fas fa-map-marker-alt",
+                title: "Location",
+                value: "Milano, Italia",
+                link: "https://maps.google.com"
+            }
+        ];
+
+        const footerLinksData = [
+            { label: "Privacy Policy", href: "#privacy" },
+            { label: "Terms of Service", href: "#terms" },
+            { label: "Cookie Policy", href: "#cookies" },
+            { label: "FAQ", href: "#faq" }
+        ];
+
+        const socialLinksData = [
+            { icon: "fab fa-instagram", href: "https://instagram.com", label: "Instagram" },
+            { icon: "fab fa-linkedin-in", href: "https://linkedin.com", label: "LinkedIn" },
+            { icon: "fab fa-twitter", href: "https://twitter.com", label: "Twitter" },
+            { icon: "fab fa-behance", href: "https://behance.net", label: "Behance" }
+        ];
+
+        // Render Functions
+        function renderNavigation(items) {
+            return items.map(item => 
+                `<li><a href="${item.href}" class="text-secondary-600 hover:text-primary-600 transition-colors duration-200 font-medium">${item.label}</a></li>`
+            ).join("");
+        }
+
+        function renderServices(items) {
+            return items.map(service => `
+                <div class="bg-white p-8 rounded-2xl border border-secondary-100 hover-lift">
+                    <div class="w-14 h-14 rounded-xl bg-primary-100 flex items-center justify-center mb-6">
+                        <i class="${service.icon} text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-display font-semibold text-secondary-900 mb-4">${service.title}</h3>
+                    <p class="text-secondary-600 mb-6">${service.description}</p>
+                    <ul class="space-y-2">
+                        ${service.features.map(feature => `<li class="text-sm text-secondary-500 flex items-center">
+                            <i class="fas fa-check text-primary-500 mr-2 text-xs"></i>${feature}
+                        </li>`).join("")}
+                    </ul>
+                </div>
+            `).join("");
+        }
+
+        function renderProjects(items) {
+            return items.map(project => `
+                <article class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-2xl mb-6">
+                        <img src="${project.image}" alt="${project.title}" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </div>
+                    <div class="${project.color} px-4 py-2 rounded-full inline-block mb-4">
+                        <span class="text-sm font-medium text-secondary-700">${project.category}</span>
+                    </div>
+                    <h3 class="text-xl font-display font-semibold text-secondary-900 mb-3">${project.title}</h3>
+                    <p class="text-secondary-600 mb-4">${project.description}</p>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-primary-500 mr-2"></div>
+                        <span class="text-sm font-medium text-secondary-900">${project.results}</span>
+                    </div>
+                </article>
+            `).join("");
+        }
+
+        function renderContactInfo(items) {
+            return items.map(item => `
+                <div class="text-center">
+                    <div class="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center mx-auto mb-4">
+                        <i class="${item.icon} text-primary-600 text-xl"></i>
+                    </div>
+                    <h4 class="font-display font-semibold text-secondary-900 mb-2">${item.title}</h4>
+                    <a href="${item.link}" class="text-primary-600 hover:text-primary-700 transition-colors duration-200">
+                        ${item.value}
+                    </a>
+                </div>
+            `).join("");
+        }
+
+        function renderFooterLinks(items) {
+            return items.map(item => 
+                `<li><a href="${item.href}" class="text-secondary-300 hover:text-white transition-colors duration-200">${item.label}</a></li>`
+            ).join("");
+        }
+
+        function renderSocialLinks(items) {
+            return items.map(item => 
+                `<a href="${item.href}" target="_blank" rel="noopener noreferrer" aria-label="${item.label}" class="w-10 h-10 rounded-full bg-secondary-800 hover:bg-primary-600 flex items-center justify-center transition-colors duration-200">
+                    <i class="${item.icon}"></i>
+                </a>`
+            ).join("");
+        }
+
+        // DOM Initialization
+        document.addEventListener("DOMContentLoaded", function() {
+            // Render navigation
+            document.getElementById("nav-links").innerHTML = renderNavigation(navigationData);
+            document.getElementById("mobile-nav-links").innerHTML = renderNavigation(navigationData);
+            
+            // Render services
+            document.getElementById("services-grid").innerHTML = renderServices(servicesData);
+            
+            // Render projects
+            document.getElementById("projects-grid").innerHTML = renderProjects(projectsData);
+            
+            // Render contact info
+            document.getElementById("contact-info").innerHTML = renderContactInfo(contactInfoData);
+            
+            // Render footer
+            document.getElementById("footer-links").innerHTML = renderFooterLinks(footerLinksData);
+            document.getElementById("social-links").innerHTML = renderSocialLinks(socialLinksData);
+            
+            // Set current year
+            document.getElementById("current-year").textContent = new Date().getFullYear();
+            
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+            const mobileMenu = document.getElementById("mobile-menu");
+            
+            mobileMenuBtn.addEventListener("click", function() {
+                mobileMenu.classList.toggle("hidden");
+                const icon = mobileMenuBtn.querySelector("i");
+                if (mobileMenu.classList.contains("hidden")) {
+                    icon.classList.remove("fa-times");
+                    icon.classList.add("fa-bars");
+                } else {
+                    icon.classList.remove("fa-bars");
+                    icon.classList.add("fa-times");
+                }
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute("href");
+                    if (targetId === "#") return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        // Close mobile menu if open
+                        if (!mobileMenu.classList.contains("hidden")) {
+                            mobileMenu.classList.add("hidden");
+                            const icon = mobileMenuBtn.querySelector("i");
+                            icon.classList.remove("fa-times");
+                            icon.classList.add("fa-bars");
+                        }
+                        
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            });
+            
+            // Contact form submission
+            const contactForm = document.getElementById("contact-form");
+            contactForm.addEventListener("submit", function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(this);
+                const formObject = Object.fromEntries(formData);
+                
+                // Here you would typically send the data to a server
+                console.log("Form submitted:", formObject);
+                
+                // Show success message
+                alert("Grazie per il tuo messaggio! Ti risponderò al più presto.");
+                this.reset();
+            });
+            
+            // Add intersection observer for scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("opacity-100", "translate-y-0");
+                        entry.target.classList.remove("opacity-0", "translate-y-4");
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe elements for animation
+            document.querySelectorAll("section > div > *").forEach((el, index) => {
+                if (index > 0) { // Skip first child
+                    el.classList.add("opacity-0", "translate-y-4", "transition-all", "duration-500", "ease-out");
+                    observer.observe(el);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
